@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title> ALBOE Systems by Christina McConnell </title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ALBOE systems Homepage">
+<meta name="author" content="Christina McConnell">
+<meta name="robots" content="no index">
+<meta charset="UTF-8">
+
+</head>
+
+<body>
+
+<div class="site">
+<div class="header">
+<div class="logo">
+<img src= "images/logo.png">
+</div>
+
+<div class="dropdown">
+<div onclick="myFunction()" class="dropbtn"> <img src="images/nav.svg" class="nav"> </div>
+  <div id="myDropdown" class="dropdown-content">
+	<a href="index.htm"> Home </a>
+    <a href="Products.htm"> Our Products </a>
+    <a href="Reviews.htm"> Reviews </a>
+    <a href="Consultation.htm"> Consultation </a>
+	<a href="AboutUs.htm"> About Us </a>
+  </div>
+</div>
+
+</div>
+
+<div class="container">
+<div class="title">
+ALBOE Systems
+</div>
+<div class="cta">
+<img id="image0" class="ctashow" src="images/ScreenShot1.png">
+<img id="image1" class="ctahidden" src="images/ScreenShot2.jpg">
+<img id="image2" class="ctahidden" src="images/ScreenShot3.jpg">
+</div>
+</div>
+
+
+<div class="footer">
+<div class="testimonial"> <div class="review-icon"> <img src="images/reviewicon.svg"> </div>
+<h3> Mary J. </h3>
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur vehicula augue, ac rutrum orci tempor ut! Nullam porta odio in cursus imperdiet.  </p>
+</div>
+<div class="testimonial"> <div class="review-icon"> <img src="images/reviewicon.svg"> </div>
+<h3> Lou M. </h3>
+<p> Donec blandit accumsan augue, a ultrices justo laoreet eu. Suspendisse cursus id ex nec efficitur. Proin laoreet velit id accumsan accumsan! </p>
+</div>
+<div class="testimonial"> <div class="review-icon"> <img src="images/reviewicon.svg"> </div>
+<h3> Steve H. </h3>
+<p> Morbi vestibulum sagittis eros, in porta ex maximus quis! Proin ornare, turpis ut gravida porttitor, nibh nunc euismod erat, non cursus urna sapien non est. </p>
+</div>
+</div>
+</div>
+
+
+<script>
+// CTA
+var currentSlide = 0;
+var maxSlides = 3;
+function updateSlide() {
+	var oldSlide = document.getElementById("image" + currentSlide);
+	
+	oldSlide.className = "ctaold";
+	setTimeout( ( ) => {
+		oldSlide.className = "ctahidden";
+	}, 2500 );
+	
+	currentSlide += 1;
+	
+	
+	if (currentSlide >= maxSlides)
+	{currentSlide = 0;}
+	
+	var mySlide = document.getElementById("image" + currentSlide);
+	
+	mySlide.className = "ctashow";
+	
+
+	// oldSlide.className = "ctahidden";
+	setTimeout( updateSlide, 5000 );
+	}
+	
+setTimeout( updateSlide, 3000 );
+	
+
+// NAV
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn') && !event.target.matches('.nav')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>

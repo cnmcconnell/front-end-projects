@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title> ALBOE Systems by Christina McConnell </title>
+<meta name="description" content="Here the user can find details about ALBOE Systems, such as the team members and general info.">
+<meta name="author" content="Christina McConnell">
+<meta name="robots" content="no index">
+<meta charset="UTF-8">
+
+</head>
+
+<body>
+<div class="site">
+<div class="header">
+<div class="logo">
+<img src= "images/logo.png">
+</div>
+<div class="dropdown">
+<div onclick="myFunction()" class="dropbtn"> <img src="images/nav.svg" class="nav"> </div>
+  <div id="myDropdown" class="dropdown-content">
+	<a href="index.htm"> Home </a>
+    <a href="Products.htm"> Our Products </a>
+    <a href="Reviews.htm"> Reviews </a>
+    <a href="Consultation.htm"> Consultation </a>
+	<a href="AboutUs.htm"> About Us </a>
+  </div>
+</div>
+</div>
+
+<div class="container">
+<div class="title">
+About Us
+</div>
+<div class="aboutusbox">
+<h1> Meet the Team </h1>
+<table class="table-about">
+<tr>
+<td><img src="images/dog1.jpg" class="pic"> </td>
+<td class="member"> 
+<h3> Harry Jones - Owner </h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget sodales turpis. Suspendisse potenti. Cras ac risus augue. Nulla facilisi. Vivamus maximus tristique urna, ac feugiat ligula pretium sed.</p> </td>
+</tr>
+<tr>
+<td> <img src="images/dog2.jpg" class="pic"> </td>
+<td class="member"> 
+<h3> Jullian Lowe - Product Manager </h3>
+<p>Nulla aliquam metus eget risus eleifend lobortis. Phasellus quis semper nisl. Maecenas porttitor molestie lacinia. Fusce ac ultrices sem. Donec blandit dapibus turpis, et ullamcorper magna.</p> </td>
+</tr>
+<tr>
+<td><img src="images/dog3.jpg" class="pic"> </td>
+<td class="member"> 
+<h3> Justin Brown - Marking Specialist </h3>
+<p>Curabitur eros elit, blandit ut tincidunt vehicula, auctor et ante. Integer luctus ligula quis elit posuere, nec facilisis justo finibus. Nullam efficitur imperdiet ex, ac interdum ex porta at.</p> </td>
+</tr>
+<tr>
+<td class="credit">
+Pics from <a href="https://www.instagram.com/mensweardog/?hl=en"> @mensweardog </a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+
+<div class="footer-about">
+<div class="generalinfo">
+407-221-0087
+<br />
+support@sys.alboe.info
+<br />
+555 Geek St. Orlando, FL 32817
+</div>
+</div>
+</div>
+
+
+<div class="social">
+
+</div>
+
+<script>
+// NAV
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn') && !event.target.matches('.nav')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>

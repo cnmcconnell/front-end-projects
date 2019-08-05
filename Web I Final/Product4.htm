@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title> ALBOE Systems by Christina McConnell </title>
+<meta name="description" content="This page outlines the Raspberry Pi details.>
+<meta name="author" content="Christina McConnell">
+<meta name="robots" content="no index">
+<meta charset="UTF-8">
+
+</head>
+
+<body>
+<div class="site">
+<div class="header">
+<div class="logo">
+<img src= "images/logo.png">
+</div>
+<div class="dropdown">
+<div onclick="myFunction()" class="dropbtn"> <img src="images/nav.svg" class="nav"> </div>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="index.htm"> Home </a>
+	<a href="Products.htm"> Our Products </a>
+    <a href="Reviews.htm"> Reviews </a>
+    <a href="Consultation.htm"> Consultation </a>
+	<a href="AboutUs.htm"> About Us </a>
+  </div>
+</div>
+</div>
+
+<div class="container">
+
+<div class="title">
+</div>
+
+<div class="single-product">
+
+<div class="descrip">
+<h2> Raspberry Pi </h2>
+<div class="text"> 
+<ul class="list">
+<li>Cortex-A53 ARM Processor</li>
+<li>1GB DDR2</li>
+<li>64GB Micro SD Storage</li>
+<li>Built in Wifi / BT</li>
+<li>Included Power Supply, Case, and Input Devices</li>
+</ul>
+<p class="text">
+Our SoC devices, while primarily consisting of Raspberry Pi systems, can be used to fulfill any of your micro-computing needs. The possibilities stretch from cluster computing to simple iot setups.
+Primary components from <a href="https://www.raspberrypi.org/"> Raspberry Pi </a>
+</p>
+</div> 
+<br>
+<br>
+<br>
+<div class="return">
+<a href="Products.htm"> Return to Products Page </a>
+</div>
+</div>
+
+<div style="flex-direction:column;">
+<div class="individual">
+<img src="images/raspberrypi.png">
+</div>
+<div class="prod-rev">
+<h4> Review </h4>
+<p>Fusce hendrerit volutpat risus, sed suscipit nunc volutpat porta. Suspendisse interdum turpis ac metus molestie, nec euismod ligula posuere... <a href="Reviews.htm"> See More... </a></p>
+</div>
+</div>
+
+</div>
+</div>
+
+
+<div class="footer">
+<div class="filler">
+</div>
+</div>
+</div>
+
+<script>
+// NAV
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn') && !event.target.matches('.nav')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
