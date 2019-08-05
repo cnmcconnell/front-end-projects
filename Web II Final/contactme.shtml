@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!--#include virtual="/final/includes/meta.inc" -->
+  <meta name="description" content="Contact me to ask any questions or make any comments.">
+  <title> Contact Me </title>
+
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/form.css">
+  <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container" data-type="other">
+
+<!--#include virtual="/final/includes/nav.inc" -->
+
+    <div class="title">
+
+      <div class="name">
+        <div class="top"> Contact </div>
+        <div class="bottom"> Me </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="triangles">
+      <div class="triangle-one"></div>
+      <div class="triangle-content" data-type="contactme">
+        <div class="form-style-6">
+          <form action="email-me.php" method="post" onsubmit="return validForm(this)">
+            <input type="hidden" name="recipient" value="webdevteacher@gmail.com">
+            <input type="hidden" name="redirect" value="contactme.shtml">
+            <input type="text" value="" name="firstname" placeholder="First name">
+            <input type="text" value="" name="lastname" placeholder="Last name">
+
+            <input type="email" value="" name="email" placeholder="Email address">
+            <input type="tel" value="" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="Phone">
+            <input type="text" value="" name="subject" placeholder="Subject">
+            <textarea name="comments" rows="10" cols="30" placeholder="Leave a comment..."> </textarea>
+
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+      <div class="triangle-two"></div>
+      <div class="triangle-three"></div>
+    </div>
+
+
+  </div>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script>
+    /** cookie **/
+    function getCookie(name) {
+      var value = "; " + document.cookie;
+      var parts = value.split("; " + name + "=");
+      if (parts.length == 2) return parts.pop().split(";").shift();
+    }
+
+    if (!getCookie(`username`)) {
+      swal("Hi!", "What's your name?", {
+          content: "input",
+        })
+        .then((value) => {
+          swal(`Nice to meet you, ${value}! :)`);
+          document.cookie = `username=${value}`;
+        });
+    } else {
+      $("#welcomeback").text(`Welcome back, ${getCookie('username')}!`)
+    }
+  </script>
+</body>
+
+</html>

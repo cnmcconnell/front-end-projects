@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One|Nunito");
+h1,
+h3 {
+  font-family: "Fredoka One", cursive;
+  color: #3ca9c6;
+  text-decoration: underline solid #fff42f;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.container {
+  font-family: "Nunito", sans-serif;
+  display: grid;
+  grid-template-areas: " . triangles " " title triangles ";
+  grid-template-columns: 40% auto;
+  grid-template-rows: 3rem auto;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.container[data-type=other] {
+  grid-template-columns: 25% auto;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: #3ca9c6;
+  height: 3rem;
+  width: 100%;
+  font-family: "Fredoka One", cursive;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+
+.nav .after {
+  display: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000612;
+}
+
+.nav a:hover {
+  transition: border 0.2s;
+  border-bottom: 4px solid #fff42f;
+}
+
+.nav #filler {
+  flex-grow: 1;
+}
+
+.nav .home {
+  user-select: none;
+}
+
+.nav .home:hover {
+  border: none;
+}
+
+.nav div {
+  display: inline;
+  padding: 0 1rem;
+}
+
+#christina {
+  width: calc(12rem * 1.5);
+}
+
+#mcconnell {
+  width: calc(20rem * 1.5);
+}
+
+.title {
+  background-color: #780b0b;
+  height: 100%;
+  grid-area: title;
+  display: flex;
+  align-items: center;
+}
+
+.title .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 5.5rem;
+}
+
+.title .top {
+  font-size: 3vw;
+  font-family: "Fredoka One", cursive;
+  color: #dee9ff;
+}
+
+.title .bottom {
+  font-size: 5.2vw;
+  font-family: "Fredoka One", cursive;
+  color: #dee9ff;
+}
+
+.title .blurb {
+  font-family: "Nunito", sans-serif;
+  font-size: 24px;
+  color: #0c242a;
+}
+
+.title .logos {
+  display: flex;
+  flex-direction: row;
+}
+
+.title .logos div {
+  margin: 2rem 1rem;
+}
+
+.triangles {
+  grid-area: triangles;
+  display: flex;
+  flex-direction: row;
+}
+
+.triangles .triangle-one {
+  width: 0;
+  height: 0;
+  border-top: 50vh solid rgba(120, 11, 11, 0.8);
+  border-bottom: 50vh solid rgba(120, 11, 11, 0.8);
+  border-left: 10vw solid #780b0b;
+}
+
+.triangles .triangle-content {
+  transition: width 0.5s;
+  background-color: rgba(120, 11, 11, 0.8);
+  width: 25vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+.triangles .triangle-content[data-expanded=true] {
+  width: 40vw;
+  max-height: 80vh;
+  flex-direction: row;
+  padding: 10vh 0;
+}
+
+.triangles .triangle-content .original {
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+.triangles .triangle-content .original div {
+  color: #dee9ff;
+  background-color: rgba(118, 11, 11, 0.8);
+  padding: 0.5rem;
+  margin: 1rem;
+  border-radius: 0.4rem;
+  border: 4px solid #3ca9c6;
+  max-width: 16rem;
+}
+
+.triangles .triangle-content .original div h3 {
+  text-decoration: none;
+}
+
+.triangles .triangle-content .original div:hover {
+  background-color: rgba(143, 13, 13, 0.6);
+  cursor: pointer;
+}
+
+.triangles .triangle-content .extra {
+  display: none;
+  flex-direction: column;
+}
+
+.triangles .triangle-content .extra div {
+  color: #dee9ff;
+  background-color: rgba(118, 11, 11, 0.8);
+  padding: 0.5rem;
+  margin: 1rem;
+  border-radius: 0.4rem;
+  border: 4px solid #3ca9c6;
+  max-width: 16rem;
+}
+
+.triangles .triangle-content .extra div h3 {
+  text-decoration: none;
+}
+
+.triangles .triangle-content .extra div:hover {
+  background-color: rgba(143, 13, 13, 0.6);
+  cursor: pointer;
+}
+
+.triangles .triangle-content .extra[data-show=true] {
+  display: block;
+}
+
+.triangles .triangle-content[data-type='aboutme'] {
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: white;
+  padding: 0 5rem;
+}
+
+.triangles .triangle-content[data-type='aboutme'] div {
+  width: 100%;
+}
+
+.triangles .triangle-content[data-type='aboutme'] .experience table {
+  border-spacing: 0.5rem;
+}
+
+.triangles .triangle-content[data-type='aboutme'] .experience th {
+  text-align: left;
+}
+
+.triangles .triangle-content[data-type='contactme'] {
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.triangles .triangle-two {
+  width: 0;
+  height: 0;
+  border-top: 50vh solid rgba(120, 11, 11, 0.6);
+  border-bottom: 50vh solid rgba(120, 11, 11, 0.6);
+  border-left: 10vw solid rgba(120, 11, 11, 0.8);
+  transition: border-left 0.5s;
+}
+
+.triangles .triangle-two .see-more {
+  transition: transform 0.5s;
+  transform: translateY(40vh) translateX(-6rem);
+  width: 5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.triangles .triangle-two .see-more[data-expanded=true] {
+  transform: translateY(40vh) translateX(-6rem) rotate(180deg);
+}
+
+.triangles .triangle-two[data-expanded=true] {
+  border-left: 20vw solid rgba(120, 11, 11, 0.8);
+}
+
+.triangles .triangle-three {
+  width: 0;
+  height: 0;
+  border-top: 50vh solid transparent;
+  border-bottom: 50vh solid transparent;
+  border-left: 10vw solid rgba(120, 11, 11, 0.6);
+  transition: border-left 0.5s;
+}
+
+.triangles .triangle-three[data-expanded=true] {
+  border-left: 20vw solid rgba(120, 11, 11, 0.6);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.tags div {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 5rem;
+  height: 1.5rem;
+  background-color: #610909;
+}
+
+@media only screen and (max-width: 1860px) {
+  .title .bottom[data-type='projects'] {
+    font-size: 4.8vw;
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  .title {
+    justify-content: center;
+  }
+  .title .top {
+    font-size: 5rem;
+  }
+  .title .bottom {
+    font-size: 5rem;
+  }
+  .title .name {
+    transform: rotate(-90deg);
+    flex-direction: row;
+  }
+  .title .name[data-type='index'] {
+    transform: none;
+    flex-direction: column;
+  }
+  #christina {
+    width: calc(10rem * 1.4);
+  }
+  #mcconnell {
+    width: calc(18rem * 1.4);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    grid-template-areas: " . . " " title title " "triangles triangles ";
+    grid-template-columns: auto;
+    grid-template-rows: auto 20rem auto;
+  }
+  h1 {
+    text-align: center;
+  }
+  .nav .before {
+    display: none;
+  }
+  .nav .after {
+    display: block;
+  }
+  .triangles {
+    flex-direction: column;
+  }
+  .triangles .triangle-one {
+    border-top: 18vh solid #780b0b;
+    border-left: 50vw solid rgba(120, 11, 11, 0.8);
+    border-right: 50vw solid rgba(120, 11, 11, 0.8);
+    border-bottom: none;
+  }
+  .triangles .triangle-two {
+    border-top: 18vh solid rgba(120, 11, 11, 0.8);
+    border-left: 50vw solid rgba(120, 11, 11, 0.6);
+    border-right: 50vw solid rgba(120, 11, 11, 0.6);
+    border-bottom: none;
+  }
+  .triangles .triangle-two .see-more {
+    display: none;
+  }
+  .triangles .triangle-content {
+    width: 100%;
+    height: auto;
+  }
+  .triangles .triangle-content .extra {
+    flex-direction: row;
+    display: block;
+  }
+  .triangles .triangle-content .original {
+    flex-direction: row;
+  }
+  .triangles .triangle-content .general {
+    max-width: 50vw;
+  }
+  .triangles .triangle-content[data-type='aboutme'] {
+    padding: 0.5rem;
+  }
+  .triangles .triangle-content[data-type='aboutme'] > div {
+    width: auto;
+    margin: 2rem 0;
+  }
+  .triangles .triangle-three {
+    border-top: 18vh solid rgba(120, 11, 11, 0.6);
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-bottom: none;
+  }
+  #christina {
+    width: calc(10rem * 1.5);
+  }
+  #mcconnell {
+    width: calc(18rem * 1.5);
+  }
+  .title {
+    justify-content: center;
+    padding: 2rem 0;
+  }
+  .title .name {
+    flex-direction: column;
+    align-items: center;
+    transform: none;
+  }
+  .title .top {
+    font-size: 6vh;
+  }
+  .title .bottom {
+    font-size: 8vh;
+  }
+  .title .bottom[data-type='projects'] {
+    font-size: 8vh;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  h1 {
+    text-align: center;
+  }
+  .container {
+    grid-template-areas: " . . " " title title " "triangles triangles ";
+    grid-template-columns: auto;
+    grid-template-rows: 3rem 20rem auto;
+  }
+  .container[data-type=other] {
+    grid-template-rows: 3rem 12rem auto;
+  }
+  .nav .before {
+    display: none;
+  }
+  .nav .after {
+    display: block;
+  }
+  .nav div {
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+  .triangles .triangle-content[data-type='aboutme'] {
+    padding: 0.5rem;
+  }
+  .triangles .triangle-content[data-type='aboutme'] div {
+    width: auto;
+    max-width: none;
+  }
+  #welcomeback {
+    display: none;
+  }
+  #filler {
+    display: none;
+  }
+  #christina {
+    width: calc(8rem * 1.4);
+  }
+  #mcconnell {
+    width: calc(10rem * 1.4);
+  }
+  .title .blurb {
+    font-size: 1rem;
+  }
+  .title .name {
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+  }
+}

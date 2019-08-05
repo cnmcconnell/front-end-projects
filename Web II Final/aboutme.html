@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+  </head>
+
+  <body>
+
+<div class="container" data-type="other">
+
+    <div class="nav">
+
+
+      <div> <a class="home" href="index.html"> <img src="images/home.svg" style="height: 2rem; margin: 0 0 -.2rem;"> </a></div>
+      <div> <a href="projects.html"> Projects </a></div>
+      <div class="before"> <a href="contactme.html"> Contact Me </a></div>
+      <div class="after"> <a href="contactme.html"> Contact </a></div>
+      <div class="before"> <a href="aboutme.html"> About Me </a></div>
+      <div class="after"> <a href="aboutme.html"> About </a></div>
+      <div> <a href="blog.html"> Blog </a></div>
+<div id="welcomeback"></div>
+
+    </div>
+
+    <div class="title">
+
+      <div class="name">
+        <div class="top"> About </div>
+        <div class="bottom"> Me </div>
+
+      </div>
+
+    </div>
+
+
+      <div class="triangles">
+        <div class="triangle-one"></div>
+        <div class="triangle-content" data-type="aboutme">
+  <div class="general">
+    <h1> Hey there </h1>
+    Sed a porttitor diam. Vivamus egestas faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur purus leo, vulputate eu libero id, iaculis viverra justo.
+  </div>
+  <div class="skills">
+    <h1> Skills </h1>
+      <ul>
+      <li> Mauris vulputate porttitor ullamcorper </li>
+      <li> Vestibulum eu posuere dui, eget efficitur magna </li>
+      <li> Nulla vel ornare neque </li>
+      <li> Duis egestas elementum dui </li>
+    </ul>
+  </div>
+
+  <div class="experience">
+
+    <h1> Experience </h1>
+
+  <table>
+<tr>
+  <th> Quisque non metus </th>
+  <th> 1238 </th>
+</tr>
+<tr>
+  <th> Vehicula cursus </th>
+  <th> 1238 </th>
+</tr>
+<tr>
+  <th> Vehicula cursus </th>
+  <th> 1238 </th>
+</tr>
+<tr>
+  <th> Vehicula cursus</th>
+  <th> 1238 </th>
+</tr>
+  </table>
+
+  </div>
+
+        </div>
+        <div class="triangle-two"></div>
+        <div class="triangle-three"></div>
+      </div>
+
+
+</div>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+/** cookie **/
+function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length == 2) return parts.pop().split(";").shift();
+}
+
+if (!getCookie(`username`))
+{
+  swal("Hi!", "What's your name?", {
+    content: "input",
+  })
+  .then((value) => {
+    swal(`Nice to meet you, ${value}! :)`);
+    document.cookie=`username=${value}`;
+  });
+}
+
+else {
+  $("#welcomeback").text(`Welcome back, ${getCookie('username')}!`)
+}
+
+
+</script>
+
+  </body>
+
+</html>

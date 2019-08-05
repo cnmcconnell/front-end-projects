@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!--#include virtual="/final/includes/meta.inc" -->
+  <meta name="description" content="Here you can find all of my projects and assignments I've been working on.">
+  <title> My Projects </title>
+
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/popup.css">
+  <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+  <div class="popup" data-hidden="true">
+    <div class="popup-container">
+      <div class="popup-closer" onclick="handlePopup()"> <img src="images/close.svg" alt="close"></div>
+      <picture>
+        <source id="popup-pic-sm" srcset="" media="(max-width: 420px)">
+        <img id="popup-pic" src="" alt="">
+      </picture>
+    </div>
+  </div>
+
+  <div class="container" data-type="other">
+
+  <!--#include virtual="/final/includes/nav.inc" -->
+
+    <div class="title">
+
+      <div class="name">
+        <div class="top"> My </div>
+        <div class="bottom" data-type="projects"> Projects </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="triangles">
+      <div class="triangle-one"></div>
+      <div class="triangle-content">
+        <div class="original">
+          <div> <img src="images/project5-1-1.png" onclick="handlePopup('images/project5-1.png', 'images/tiny5.jpeg', 'Screenshot of website one')"> </div>
+          <div> <img src="images/project1-1-1.png" onclick="handlePopup('images/project1-1.png', 'images/tiny1.jpeg', 'Screenshot of website two')"> </div>
+          <div> <img src="images/project2-1-1.png" onclick="handlePopup('images/project2-1.png', 'images/tiny2.jpeg', 'Screenshot of website three')"> </div>
+          <div> <img src="images/project3-1-1.png" onclick="handlePopup('images/project3-1.png', 'images/tiny3.jpeg', 'Screenshot of website four')"> </div>
+        </div>
+        <div class="extra">
+          <div> <img src="images/project4-1-1.png" onclick="handlePopup('images/project4-1.png', 'images/tiny4.jpeg', 'Screenshot of website five')"> </div>
+          <div> <img src="images/project4-1-1.png" onclick="handlePopup('images/project4-1.png', 'images/tiny4.jpeg', 'Screenshot of website six')"> </div>
+          <div> <img src="images/project4-1-1.png" onclick="handlePopup('images/project4-1.png', 'images/tiny4.jpeg', 'Screenshot of website seven')"> </div>
+          <div> <img src="images/project4-1-1.png" onclick="handlePopup('images/project4-1.png', 'images/tiny4.jpeg', 'Screenshot of website eight')"> </div>
+        </div>
+      </div>
+
+      <div class="triangle-two">
+        <div class="see-more"> <img src="images/forward.svg" alt="see more"> </div>
+      </div>
+      <div class="triangle-three"></div>
+    </div>
+
+
+  </div>
+
+  <script type="text/javascript" src="scripts/popup.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script>
+    let expanded = false;
+
+    function toggleExpand() {
+      expanded = !expanded;
+      document.querySelector('.triangle-content').setAttribute('data-expanded', expanded ? true : false);
+      document.querySelector('.triangle-two').setAttribute('data-expanded', expanded ? true : false);
+      document.querySelector('.triangle-three').setAttribute('data-expanded', expanded ? true : false);
+      document.querySelector('.see-more').setAttribute('data-expanded', expanded ? true : false);
+      console.log('hi, ily Christina');
+
+      let extraElements = document.getElementsByClassName('extra');
+      for (let i = 0; i < extraElements.length; i++) {
+        extraElements[i].setAttribute('data-show', expanded ? true : false);
+      }
+
+
+    }
+
+    document.querySelector('.see-more').onclick = toggleExpand;
+  </script>
+
+  <script>
+    /** cookie **/
+    function getCookie(name) {
+      var value = "; " + document.cookie;
+      var parts = value.split("; " + name + "=");
+      if (parts.length == 2) return parts.pop().split(";").shift();
+    }
+
+    if (!getCookie(`username`)) {
+      swal("Hi!", "What's your name?", {
+          content: "input",
+        })
+        .then((value) => {
+          swal(`Nice to meet you, ${value}! :)`);
+          document.cookie = `username=${value}`;
+        });
+    } else {
+      $("#welcomeback").text(`Welcome back, ${getCookie('username')}!`)
+    }
+  </script>
+</body>
+
+</html>

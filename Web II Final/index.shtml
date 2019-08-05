@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--#include virtual="/final/includes/meta.inc" -->
+  <meta name="description" content="Hi! My name is Christina McConnell, and I'm a front-end developer.">
+  <title> Christina McConnell </title>
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="nav">
+
+    <div> <a class="home" href="index.shtml"> <img src="images/home.svg" style="height: 2rem;" alt="Homepage"> </a></div>
+    <div> <a href="projects.shtml"> Projects </a></div>
+    <div class="before"> <a href="contactme.shtml"> Contact Me </a></div>
+    <div class="after"> <a href="contactme.shtml"> Contact </a></div>
+    <div class="before"> <a href="aboutme.shtml"> About Me </a></div>
+    <div class="after"> <a href="aboutme.shtml"> About </a></div>
+    <div> <a href="blog.shtml"> Blog </a></div>
+    <div id="filler"></div>
+    <div id="welcomeback"></div>
+
+  </div>
+
+  <div class="container">
+
+
+    <div class="title">
+
+      <div class="name" data-type="index">
+        <div id="christina" aria-label="Christina"></div>
+        <div id="mcconnell" aria-label="McConnell"> </div>
+
+        <div class="blurb"> A Front-end Developer </div>
+        <div class="logos">
+          <div> <a href="https://github.com/cnmcconnell"> <img src="images/github.png" alt="Link to Github.com"> </a> </div>
+          <div> <a href="https://www.linkedin.com/in/christina-mcconnell-189662179/"> <img src="images/linkedin.png" alt="Link to Linkedin.com"> </a> </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <div class="triangles">
+      <div class="triangle-one"></div>
+      <div class="triangle-two"></div>
+      <div class="triangle-three"></div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="scripts/vivus.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <script>
+    new Vivus('christina', {
+      duration: 500,
+      file: 'images/christina.svg'
+    }, () => {
+      console.log('done');
+    });
+    new Vivus('mcconnell', {
+      duration: 300,
+      file: 'images/mcconnell.svg'
+    }, () => {
+      console.log('done');
+    });
+  </script>
+
+  <script>
+    /** cookie **/
+    function getCookie(name) {
+      var value = "; " + document.cookie;
+      var parts = value.split("; " + name + "=");
+      if (parts.length == 2) return parts.pop().split(";").shift();
+    }
+
+    if (!getCookie(`username`)) {
+      swal("Hi!", "What's your name?", {
+          content: "input",
+        })
+        .then((value) => {
+          swal(`Nice to meet you, ${value}! :)`);
+          document.cookie = `username=${value}`;
+        });
+    } else {
+      $("#welcomeback").text(`Welcome back, ${getCookie('username')}!`)
+    }
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--#include virtual="/final/includes/meta.inc" -->
+  <meta name="description" content="Discover who I am, what skills I have, and what experience I've gained.">
+  <title> About Me </title>
+
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container" data-type="other">
+
+<!--#include virtual="/final/includes/nav.inc" -->
+
+    <div class="title">
+
+      <div class="name">
+        <div class="top"> About </div>
+        <div class="bottom"> Me </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="triangles">
+      <div class="triangle-one"></div>
+      <div class="triangle-content" data-type="aboutme">
+        <div class="general">
+          <h1> Hey there </h1>
+          Sed a porttitor diam. Vivamus egestas faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur purus leo, vulputate eu libero id, iaculis viverra justo.
+        </div>
+        <div class="skills">
+          <h1> Skills </h1>
+          <div class="tags">
+
+            <div> CSS3 </div>
+            <div> HTML5 </div>
+            <div> JavaScript </div>
+            <div> Java </div>
+            <div> SASS </div>
+            <div> JQuery </div>
+
+          </div>
+
+        </div>
+
+        <div class="experience">
+
+          <h1> Experience </h1>
+
+          <table>
+            <tr>
+              <th> Quisque non metus </th>
+              <th> 2015-2018 </th>
+            </tr>
+            <tr>
+              <th> Vehicula cursus </th>
+              <th> XXXX-XXXX </th>
+            </tr>
+            <tr>
+              <th> Vehicula cursus </th>
+              <th> XXXX-XXXX </th>
+            </tr>
+            <tr>
+              <th> Vehicula cursus</th>
+              <th> XXXX-XXXX </th>
+            </tr>
+          </table>
+
+        </div>
+
+      </div>
+      <div class="triangle-two"></div>
+      <div class="triangle-three"></div>
+    </div>
+
+
+  </div>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script>
+    /** cookie **/
+    function getCookie(name) {
+      var value = "; " + document.cookie;
+      var parts = value.split("; " + name + "=");
+      if (parts.length == 2) return parts.pop().split(";").shift();
+    }
+
+    if (!getCookie(`username`)) {
+      swal("Hi!", "What's your name?", {
+          content: "input",
+        })
+        .then((value) => {
+          swal(`Nice to meet you, ${value}! :)`);
+          document.cookie = `username=${value}`;
+        });
+    } else {
+      $("#welcomeback").text(`Welcome back, ${getCookie('username')}!`)
+    }
+  </script>
+
+</body>
+
+</html>
