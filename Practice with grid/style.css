@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700');
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+@import url('https://fonts.googleapis.com/css?family=Chelsea+Market');
+
+* {
+	background-color: inherit;
+	color: inherit;
+	font-family: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	color: #eee;
+	width: 100%;
+	height: 100%;
+	font: 16px Verdana, Geneva, sans-serif; 
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	background-image: url('images/wood.jpg'); 
+	background-position: center;
+	background-size: cover;
+}
+
+
+
+#grid {
+	display: grid; 
+	grid-template-areas: 
+		"header header header header header header header header header header"
+		". title . . . . . . . ."
+		". title . bar bar bar bar bar . ."
+		". title . . . . . . . ."
+		". title nav nav . body body-empty-top . . ."
+		". title nav nav . body box box box ."
+		". . . . . body box box box ."
+		". . . . . body body-empty-bottom . . ."
+		". . . . . body body-empty-bottom . . ."
+		"footer footer footer footer footer footer footer footer footer footer";
+	grid-template-columns: 15% 9em 2em 5em 1.5em auto 8em 5em 7em 15%;
+	grid-template-rows: 2em 2em .6em 2em 12em 19em 6.24em 4em auto 4em;
+	height: 100%;
+	width: 100%;
+}
+
+#header {
+	background-color: #283D3B; 
+	grid-area: header;
+	border-bottom: .2em dashed #772E25;
+	}
+
+#nav {
+	background-color: #428B90;
+	grid-area: nav;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	
+}
+#nav div:first-child {border-top-width: .125em;}
+#nav div:last-child {border-bottom-width: .125em;}
+
+#bar {
+	background-color: #772E25;
+	grid-area: bar;
+	border-radius: .1em;
+}
+
+
+#title {
+	background-color: #428B90;
+	grid-area: title;
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	border-left: .3em dashed white;
+	border-bottom: .3em dashed white;
+}
+
+#titletext {
+	transform: rotate(-90deg);
+	font: 5em 'Amatic SC', cursive;
+	min-width: 7em;
+	text-align: center;
+}
+
+#body {
+	background-color: #dcc8bce0;
+	grid-area: body;
+	padding: 2.5em 3.5em;
+}
+
+#body-empty-top {
+	background-color: #dcc8bce0;
+	grid-area: body-empty-top;
+	border-right: .6em dashed #772E25;
+}
+
+#body-empty-bottom {
+	background-color: #dcc8bce0;
+	grid-area: body-empty-bottom;
+	border-right: .6em dashed #772E25;
+}
+
+#box {
+	background-color: #772E25;
+	grid-area: box;
+}
+
+#footer {
+	background-color: #283D3B;
+	grid-area: footer;
+	display: flex;
+    justify-content: center;
+	align-items: center;
+}
+
+
+
+.navbutton {text-align: center; border-right: .4em solid #428B90; border-bottom: .05em solid #155e6347; border-top: .05em solid #155e6347; transition: all 1s; padding: 2em 0; font-family: 'Fredericka the Great', cursive;}
+
+.navbutton:hover {border-right-color: #155E63;}
+
+.copyright {font-size: .7em; color: #456864;}
+
+.quote {font: 2.4em 'Amatic SC', cursive; padding: .4em; margin: 1em; text-align: center; border: .1em solid white;}
+ 
+ p {line-height: 1.6em; padding: .5em; background-color: #dbccc300; font-family: 'Chelsea Market', cursive; color: #fbf4f0;}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
