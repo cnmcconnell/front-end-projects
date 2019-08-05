@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--#include virtual="/includes/meta.inc" -->
+    <meta name="description" content="Boondock Bill's is a contemporary bar offering a variety of midwestern cuisine and drinks. Find out how to reach us and visit today!">
+    <title> Contact Us </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+
+
+  </head>
+  <body>
+
+
+  <div class="container-fluid">
+
+<!--#include virtual="/includes/header.inc" -->
+
+    <!--#include virtual="/includes/filler.inc" -->
+
+    <div class="row center">
+      <div class="col-4 catchphrase">
+        <div> GET </div>
+        <div> IN </div>
+        <div> TOUCH </div>
+      </div>
+
+      <div class="col contact1">
+        <div>
+          <h4> Contact </h4>
+          <p> Bar Manager: Jeff Garcia </p>
+          <p> Phone: (321)456-7788 </p>
+          <p> Email: boondock.bills@gmail.com </p>
+        </div>
+        <div>
+          <h4> Hours </h4>
+          <p> Monday-Wednesday: 11am-12am | </p>
+          <p> Friday-Saturday: 11am-2am | </p>
+          <p>  Sunday: 2pm-12am </p>
+          </div>
+          <div>
+            <h4> Location </h4>
+            <p> 97 E Pine St, Orlando, FL 32801 </p>
+            <a href="https://www.google.com/maps/dir//67+E+Pine+St,+Orlando,+FL+32801/@28.5702939,-81.2353609,15z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x88e77afdce237885:0x7539dcf33439866f!2m2!1d-81.3776584!2d28.5415028">
+              <div class="directions">
+                Get Directions
+              </div>
+            </a>
+          </div>
+
+      </div>
+
+    <div class="col contactimage">
+
+  </div>
+    </div>
+
+
+    <div class="row align-items-center footer">
+      <div>
+        <!--#config timefmt="%A %B %d %Y" -->
+        <!--#echo var="DATE_LOCAL" -->
+      </div>
+      <div>
+      &copy; Christina McConnell
+    </div>
+  </div>
+</div>
+
+
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+    <script>
+    function getCookie(name) {
+      var value = "; " + document.cookie;
+      var parts = value.split("; " + name + "=");
+      if (parts.length == 2) return parts.pop().split(";").shift();
+    }
+
+    if (!getCookie(`username`))
+    {
+      swal("Hello!", "What's your name?", {
+        content: "input",
+      })
+      .then((value) => {
+        swal(`Hello, ${value}!`);
+        document.cookie=`username=${value}`;
+      });
+    }
+
+    else {
+      $("#welcomeback").text(`Welcome back, ${getCookie('username')}!`)
+    }
+
+
+    </script>
+
+
+
+
+    <script>
+ /** carousel **/
+            (function($) {
+                $(function() {
+                    $('.jcarousel').jcarousel();
+
+                    $('.jcarousel-control-prev')
+                        .on('jcarouselcontrol:active', function() {
+                            $(this).removeClass('inactive');
+                        })
+                        .on('jcarouselcontrol:inactive', function() {
+                            $(this).addClass('inactive');
+                        })
+                        .jcarouselControl({
+                            target: '-=1'
+                        });
+
+                    $('.jcarousel-control-next')
+                        .on('jcarouselcontrol:active', function() {
+                            $(this).removeClass('inactive');
+                        })
+                        .on('jcarouselcontrol:inactive', function() {
+                            $(this).addClass('inactive');
+                        })
+                        .jcarouselControl({
+                            target: '+=1'
+                        });
+
+                    $('.jcarousel-pagination')
+                        .on('jcarouselpagination:active', 'a', function() {
+                            $(this).addClass('active');
+                        })
+                        .on('jcarouselpagination:inactive', 'a', function() {
+                            $(this).removeClass('active');
+                        })
+                        .jcarouselPagination();
+                });
+            })(jQuery);
+
+            $(document).ready(function() {
+              index = 0;
+              function auto() {
+                if (index < 3)
+                {
+                index++
+                $('.jcarousel').jcarousel('scroll', '+=1')
+                }
+                else
+                {
+                  index = 0
+                  $('.jcarousel').jcarousel('scroll', '0')
+                }
+                setTimeout(() => {auto()}, 5000);
+              }
+              setTimeout(() => {auto()}, 5000);
+            })
+    </script>
+
+
+  </body>
+</html>

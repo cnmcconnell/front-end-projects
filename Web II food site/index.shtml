@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--#include virtual="/includes/meta.inc" -->
+    <meta name="description" content="Boondock Bill's is a contemporary bar offering a variety of midwestern cuisine and drinks. Find our weekly offers and much more!">
+    <title> Boondock Bill's </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/jcarousel.basic.css">
+
+
+  </head>
+  <body>
+
+
+  <div class="container-fluid">
+
+<!--#include virtual="/includes/header.inc" -->
+
+  <!--#include virtual="/includes/filler.inc" -->
+
+    <div class="row center">
+      <div class="col catchphrase">
+        <div> TACOS. </div>
+        <div> TEQUILA. </div>
+        <div> TAPAS. </div>
+      </div>
+      <div class="col news">
+      <div class="jcarousel-wrapper">
+          <div class="jcarousel">
+              <ul>
+                  <li><picture>
+                    <source srcset="images/mimosaSm.jpg"
+                    media="(max-width: 600px)">
+                    <source srcset="images/mimosaMs.jpg"
+                    media="(max-width: 750px)">
+                    <source srcset="images/mimosaMd.jpg"
+                    media="(max-width: 1000px)">
+                    <img src="images/mimosa.jpg"  alt="Bottomless mimosas on Sundays for $9.99" >
+                  </picture></li>
+                  <li><picture>
+                    <source srcset="images/bogoSm.jpg"
+                    media="(max-width: 600px)">
+                    <source srcset="images/bogoMs.jpg"
+                    media="(max-width: 750px)">
+                    <source srcset="images/bogoMd.jpg"
+                    media="(max-width: 1000px)">
+                    <img src="images/bogo.jpg"  alt="Buy one get one margaritas on Mondays" >
+                  </picture></li>
+                  <li><picture>
+                    <source srcset="images/tacodealSm.jpg"
+                    media="(max-width: 600px)">
+                    <source srcset="images/tacodealMs.jpg"
+                    media="(max-width: 750px)">
+                    <source srcset="images/tacodealMd.jpg"
+                    media="(max-width: 1000px)">
+                    <img src="images/tacodeal.jpg"  alt="Two tacos for $2 on Tuesdays" >
+                  </picture></li>
+              </ul>
+          </div>
+
+
+          <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+          <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+          <p class="jcarousel-pagination">
+
+          </p>
+      </div>
+
+
+      </div>
+    </div>
+
+<!--#include virtual="/includes/footer.inc" -->
+
+
+
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/carousel.js"></script>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+    <script>
+    /** cookie **/
+    function getCookie(name) {
+      var value = "; " + document.cookie;
+      var parts = value.split("; " + name + "=");
+      if (parts.length == 2) return parts.pop().split(";").shift();
+    }
+
+    if (!getCookie(`username`))
+    {
+      swal("Hello!", "What's your name?", {
+        content: "input",
+      })
+      .then((value) => {
+        swal(`Hello, ${value}!`);
+        document.cookie=`username=${value}`;
+      });
+    }
+
+    else {
+      $("#welcomeback").text(`Welcome back, ${getCookie('username')}!`)
+    }
+
+
+    </script>
+
+
+    <script>
+ /** carousel **/
+            (function($) {
+                $(function() {
+                    $('.jcarousel').jcarousel();
+
+                    $('.jcarousel-control-prev')
+                        .on('jcarouselcontrol:active', function() {
+                            $(this).removeClass('inactive');
+                        })
+                        .on('jcarouselcontrol:inactive', function() {
+                            $(this).addClass('inactive');
+                        })
+                        .jcarouselControl({
+                            target: '-=1'
+                        });
+
+                    $('.jcarousel-control-next')
+                        .on('jcarouselcontrol:active', function() {
+                            $(this).removeClass('inactive');
+                        })
+                        .on('jcarouselcontrol:inactive', function() {
+                            $(this).addClass('inactive');
+                        })
+                        .jcarouselControl({
+                            target: '+=1'
+                        });
+
+                    $('.jcarousel-pagination')
+                        .on('jcarouselpagination:active', 'a', function() {
+                            $(this).addClass('active');
+                        })
+                        .on('jcarouselpagination:inactive', 'a', function() {
+                            $(this).removeClass('active');
+                        })
+                        .jcarouselPagination();
+                });
+            })(jQuery);
+
+            $(document).ready(function() {
+              index = 0;
+              function auto() {
+                if (index < 3)
+                {
+                index++
+                $('.jcarousel').jcarousel('scroll', '+=1')
+                }
+                else
+                {
+                  index = 0
+                  $('.jcarousel').jcarousel('scroll', '0')
+                }
+                setTimeout(() => {auto()}, 5000);
+              }
+              setTimeout(() => {auto()}, 5000);
+            })
+    </script>
+  </body>
+</html>

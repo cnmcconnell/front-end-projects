@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Julius+Sans+One|Special+Elite');
+@import url('https://fonts.googleapis.com/css?family=Glegoo|Poiret+One');
+
+html, body, .container-fluid {
+  height: 100%;
+}
+
+body {
+  background-image: url("../images/wall1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.col {
+  max-height: 100%;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+a:link {
+  text-decoration: none;
+  color: white;
+}
+a:active {
+  text-decoration: none;
+  color: white;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+}
+
+.filler {
+  background-color: #DD8A25;
+  text-align: right;
+  color: white;
+  height: 1.8rem;
+  align-items: center;
+  flex-shrink: 0;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.header {
+  background-color: #0B212D;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.nav {
+  align-items: center;
+}
+
+.btn {
+  background-color: #031E33;
+  border-color: #031E33;
+  margin: 1rem;
+  font-family: 'Julius Sans One', sans-serif;
+  color: white;
+}
+
+
+.btn:hover {
+  background-color: #1E313F;
+  border-color: #1E313F;
+  font-family: 'Julius Sans One', sans-serif;
+  color: white;
+}
+
+.title {
+  color: white;
+  font-family: 'Poiret One', cursive;
+  font-size: 4rem;
+  text-align: center;
+  padding: 0;
+}
+
+.center {
+flex-grow: 1;
+}
+
+.catchphrase {
+  display: block;
+  background-color: #0d2938d1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 6rem 4rem;
+  min-width: 30rem;
+  max-width: 30rem;
+}
+
+.catchphrase div {
+  color: white;
+  font-size: 4rem;
+  font-family: 'Alfa Slab One', cursive;
+  padding: 1rem;
+
+}
+
+.catchphrase2 {
+  display: none;
+  background-color: #0d2938d1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 6rem 4rem;
+  min-width: 30rem;
+}
+
+.cta img {
+  position: absolute;
+}
+
+
+
+.news {
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  background-color: #0B212D;
+  display: flex;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+  height: 4rem;
+  flex-direction: column;
+}
+
+.category {
+  cursor: pointer;
+  background-color: #0d293894;
+  width: 100%;
+  text-align: center;
+}
+
+.card-header {
+  margin-bottom: -1px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.card-body {
+  background-color: #D69342;
+}
+
+.card {
+  flex-shrink: 1;
+  flex-grow: 1;
+  display: flex;
+  align-items: stretch;
+}
+
+.foodone {
+  background-image: url("../images/app.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.foodtwo {
+  background-image: url("../images/entres.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.foodthree {
+  background-image: url("../images/churros.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.drinksone {
+  background-image: url("../images/mojito.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.drinkstwo {
+  background-image: url("../images/draught.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.drinksthree {
+  background-image: url("../images/corona.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menu {
+  overflow-y: auto;
+}
+
+.items {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 1rem 0 3rem;
+}
+
+.item {
+  width: 14rem;
+  min-height: 8rem;
+  line-height: 1.2rem;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+.item p {
+  flex-grow: 1;
+  margin: .5rem .5rem 1rem;
+  font-size: 18px;
+}
+
+
+.aboutimage  {
+  height: 100%;
+  background-image: url("../images/aboutus.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 32rem;
+}
+
+.aboutcontent p {
+  max-width: 54rem;
+  color: white;
+  font-size: 1.1rem;
+  padding: 0 4rem;
+}
+
+
+.aboutcontent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-height: none;
+  overflow-y: auto;
+  padding: 0;
+  padding: 4rem 0;
+  background-color: #0d2938;
+  border-right: 2rem #DD8A25 solid;
+  min-width: 50%;
+  }
+
+
+.contact1
+{
+  background-color: #0d2938;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 2rem #DD8A25 solid;
+}
+
+.contact1 h4 {
+  margin: 1.4rem 0;
+}
+
+.directions {
+  background-color: #dd8a25ad;
+  border: 2px solid white;
+  text-align: center;
+  max-width: 10rem;
+  padding: .6rem;
+  margin: 1rem 0 4rem;
+}
+
+.contactimage {
+  margin: 0;
+  height: 100%;
+  background-image: url("../images/outside2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+@media only screen and (max-width: 1420px) {
+.catchphrase {max-width: 100%; width: 100%; min-width: 100%; flex-direction: row; padding: 0; flex-wrap: wrap; align-items: center;}
+.row {overflow: auto;}
+}
+
+@media only screen and (max-width: 1000px) {
+html {font-size: .8rem;}
+.news {margin: 6rem 0;}
+.center {display: flex; flex-wrap: wrap; align-items: flex-start;}
+.contact1 {min-width: 100%; padding: 6rem; border-right: none; border-bottom: 36px #DD8A25 solid;}
+.aboutcontent {min-width: 100%; border-right: none; border-bottom: 36px #DD8A25 solid;}
+.aboutimage {min-width: 100%;}
+.col {max-height: none;}
+}
+
+@media only screen and (max-width: 750px) {
+.title {min-width: 100%;}
+.nav {min-width: 100%; display: flex; justify-content: center;}
+.catchphrase div {font-size: 3rem;}
+}
+
+@media only screen and (max-width: 450px) {
+#welcomeback {text-align: center;}
+.catchphrase div {font-size: 1.6rem;}
+.btn {margin: 1rem .3rem;}
+.center {display: flex; flex-wrap: wrap;}
+.contact1 {min-width: 100%;}
+.col {max-height: none;}
+}
