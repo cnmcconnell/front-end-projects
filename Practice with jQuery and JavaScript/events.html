@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Events</title>
+  <link rel="stylesheet" href="css/final.css">
+  <link rel="stylesheet" href="css/popup.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="scripts/nav.js"></script>
+  <script src="scripts/popup.js"></script>
+</head>
+
+<body>
+  <div class="popup" data-hidden="true">
+    <div class="popup-container-blog">
+      <div class="popup-closer" onclick="handlePopup()"> <img src="images/close.svg"></div>
+      <h3 id="title"> </h3>
+      <div id="blog"> </div>
+
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="header">
+      <div class="nav">
+        <a href="index.html"> Home </a>
+        <a href="about.html"> About </a>
+        <a href="events.html"> Events </a>
+        <a href="faq.html"> FAQ </a>
+        <a href="contact.html"> Contact </a>
+      </div>
+    </div>
+
+    <div class="event-content">
+      <div>
+        <div class="event-grid">
+          <div class="template"> <img src="images/event1.jpg" style="width: 250px" ; alt="Lady holding animal"> Join a Park naturalists for an awesome animal encounter <div class="eventbutton" onclick="handlePopup(0)"> SEE MORE </div>
+          </div>
+          <div class="template"> <img src="images/baseball.jpg" style="width: 250px" ; alt="baseball field"> Catch a Greenville Drive game <div class="eventbutton" onclick="handlePopup(1)"> SEE MORE </div>
+          </div>
+          <div class="template"> <img src="images/event2.png" style="width: 250px" ; alt="patio dining"> Join Joe's Place for Happy Hour <div class="eventbutton" onclick="handlePopup(2)"> SEE MORE </div>
+          </div>
+          <div class="template"> <img src="images/event1.jpg" style="width: 250px" ; alt="Lady holding animal"> Join a Park naturalists for an awesome animal encounter <div class="eventbutton" onclick="handlePopup(0)"> SEE MORE </div>
+          </div>
+          <div class="template"> <img src="images/baseball.jpg" style="width: 250px" ; alt="baseball field"> Catch a Greenville Drive game <div class="eventbutton" onclick="handlePopup(1)"> SEE MORE </div>
+          </div>
+          <div class="template"> <img src="images/event2.png" style="width: 250px" ; alt="patio dining"> Join Joe's Place for Happy Hour <div class="eventbutton" onclick="handlePopup(2)"> SEE MORE </div>
+          </div>
+          <div class="template"> <img src="images/event1.jpg" style="width: 250px" ; alt="Lady holding animal"> Join a Park naturalists for an awesome animal encounter <div class="eventbutton" onclick="handlePopup(0)"> SEE MORE </div>
+          </div>
+          <div class="template"> <img src="images/baseball.jpg" style="width: 250px" ; alt="baseball field"> Catch a Greenville Drive game <div class="eventbutton" onclick="handlePopup(1)"> SEE MORE </div>
+          </div>
+          <div class="template"> <img src="images/event2.png" style="width: 250px" ; alt="patio dining"> Join Joe's Place for Happy Hour <div class="eventbutton" onclick="handlePopup(2)"> SEE MORE </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

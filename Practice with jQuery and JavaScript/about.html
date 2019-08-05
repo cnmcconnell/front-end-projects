@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About</title>
+  <link rel="stylesheet" href="css/final.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="scripts/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="scripts/nav.js"></script>
+
+</head>
+
+<body>
+  <script>
+    $(function() {
+      $("#tabs").tabs();
+    });
+  </script>
+  <div class="main">
+    <div class="header">
+      <div class="nav">
+        <a href="index.html"> Home </a>
+        <a href="about.html"> About </a>
+        <a href="events.html"> Events </a>
+        <a href="faq.html"> FAQ </a>
+        <a href="contact.html"> Contact </a>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <div id="tabs">
+        <ul>
+          <li><a href="#tabs-1"> About </a></li>
+          <li><a href="#tabs-2"> Events/Places </a></li>
+          <li><a href="#tabs-3"> Reviews </a></li>
+          <li><a href="#tabs-4"> Works Cited </a></li>
+        </ul>
+        <div id="tabs-1">
+          <p>Greenville, SC is a gorgeous city, nestled in the Blue Ridge mountains that provides a vast range of different restaurants, events, and shops. With breathtaking scenery and a bustling downtown, Greenville is a very popular spot for
+            foodies, art enthusiasts, and nature loves alike. Downtown provides everything from unique shops and boutiques to museums and various outdoor activities, ensuring it’s visitors are entertained all year round. It’s award-winning Main
+            Street has a clever little game called “mouse on main”, where visitors can read riddles and search out tiny mice statues hidden around town. Among these, the streets are scattered with various art sculptures, friendly locals, and diverse
+            restaurants. A popular spot includes the gorgeous Falls Park where Liberty Bridge, a 345 ft long, single suspension bridge, overlooks 30-foot waterfalls and relaxing, yet lively gardens.</p>
+          <h2 style="padding: .5rem 4rem;"> History </h2>
+          <p> Greenville city was once a hunting ground for the Cherokees. In 1770, Richard Pearis established a plantation and later established Greenville County in 1786. The county was later used for cotton manufacturing, when Vardry McBee
+            constructed a mill in the 1830s. It wasn’t until the 1920s that the city began to truly develop, though coming to a standstill during the Great Depression. Charles Daniel, along with others, helped attract companies and create a strong
+            workforce in the 1950s and 60s, triggering an economic revival. </p>
+        </div>
+        <div id="tabs-2" style="display: flex; flex-direction: column">
+          <p>There are hundreds of different events happening each year in Greenville. For upcoming and yearly events check out <a href="events.html"> our event page! </a></p>
+          <h2 style="padding: .5rem 4rem;"> Popular Places </h2>
+          <div style="display: flex; flex-wrap: wrap;">
+            <div><a href="https://www.hilton.com/en/homewood/"><img src="images/hotel.svg" alt="Homewood Suites by Hilton"></a>
+              <a href="https://thenosedive.com/"><img src="images/restaurant.png" alt="Nose Dive Restaurant"></a>
+              <a href="https://chophouse47.com/"><img src="images/restaurant1.png" alt="Chophouse '47"></a></div>
+            <div><a href="https://www.coffeeunderground.info/"><img src="images/coffee.webp" alt="Coffe Underground"></a>
+              <a href="https://www.fallscottage.com/"><img src="images/restaurant2.png" alt="Mary's at Falls Cottage"></a></div>
+          </div>
+        </div>
+        <div id="tabs-3" style="padding: 5rem;">
+          <div class="review">
+            <h2> Dreamtown, USA </h2>
+            <p>- Wall Street Journal</p>
+          </div>
+          <div class="review">
+            <h2> Top 6 hot spots for travel (in the world) </h2>
+            <p>- CBS this morning</p>
+          </div>
+          <div class="review">
+            <h2> The south’s tastiest towns </h2>
+            <p>- Southern Living</p>
+          </div>
+          <div class="review">
+            <h2> Hippest little city in sc </h2>
+            <p>- Garden &amp; Gun</p>
+          </div>
+
+
+        </div>
+        <div id="tabs-4">
+          <p> “Explore Hotels, Restaurants, Shopping & Things to Do.” VisitGreenvilleSC, www.visitgreenvillesc.com/.</p>
+          <p> “Greenville, SC - Official Website: Official Website.” Greenville, SC - Official Website | Official Website, www.greenvillesc.gov/.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

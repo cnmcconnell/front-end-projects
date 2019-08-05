@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact</title>
+  <link rel="stylesheet" href="css/final.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script src="scripts/nav.js"></script>
+  <script src="scripts/regex.js"></script>
+
+
+</head>
+
+<body>
+
+  <script>
+    $(document).ready(function(){
+          $('.bxslider').bxSlider({
+            auto: true,
+            autoControls: true,
+            stopAutoOnClick: true,
+            pager: true,
+            slideWidth: 900
+          });
+        });
+      </script>
+
+  <div class="main">
+    <div class="header">
+      <div class="nav">
+        <a href="index.html"> Home </a>
+        <a href="about.html"> About </a>
+        <a href="events.html"> Events </a>
+        <a href="faq.html"> FAQ </a>
+        <a href="contact.html"> Contact </a>
+      </div>
+    </div>
+
+    <div class="contact-content">
+      <div class="bxslider contact-image">
+        <div><img src="images/greenville1.jpg" alt="City view"></div>
+        <div><img src="images/greenville4.jpg" alt="City view"></div>
+        <div><img src="images/greenville3.jpg" alt="City view"></div>
+      </div>
+      <!--
+    <div class="contact-image"> <img src="images/greenville1.jpg" style="width: 1000px"> </div> -->
+      <div class="contact-form">
+        <div class="form-style-6">
+          <form action="email-me.php" method="post" onsubmit="return validForm(this)">
+            <input type="hidden" name="recipient" value="cnmcconnell@gmail.com">
+            <input type="hidden" name="subject" value="New Comment">
+            <input type="hidden" name="redirect" value="contact.html">
+            <input type="text" value="" name="firstname" placeholder="First name">
+            <input type="text" value="" name="lastname" placeholder="Last name"><br><br>
+            <input id="phone" type="tel" value="" name="phone" placeholder="XXX-XXX-XXXX"> <span>&nbsp;</span><br><br>
+            <input id="email" type="email" value="" name="email" placeholder="Email address"> <span>&nbsp;</span><br><br>
+            <input type="text" value="" name="subject" placeholder="Subject">
+            <textarea name="comments" rows="10" cols="30" placeholder="Leave a comment..."> </textarea>
+            <div><input type="checkbox" name="newsletter" value="yes" checked> Recieve newsletter</div>
+
+            <button id="validate" type="button"> Submit </button><span>&nbsp;</span><br><br>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
