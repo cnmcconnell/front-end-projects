@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--#include virtual="/includes/meta.inc" -->
+    <meta name="description" content="Boondock Bill's is a contemporary bar offering a variety of delicious, midwestern cuisine. Check out our food menu here!">
+    <title> Food </title>
+
+
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/jcarousel.basic.css">
+    <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+
+
+  </head>
+
+  <body>
+    <div class="foodcontainer">
+
+      <!--#include virtual="/includes/header.inc" -->
+
+      <!--#include virtual="/includes/nav.inc" -->
+
+      <!--#include virtual="/includes/filler.inc" -->
+
+        <div class="catchphrase">
+        <div> TACOS. </div>
+        <div> TEQUILA. </div>
+        <div> TAPAS. </div>
+      </div>
+
+
+  <div class="menucontainer">
+    <div class="category">
+      <h1> Appetizer </h1>
+      <div class="items">
+        <div class="item">
+          <h3> Chimayo-Marinated Shrimp </h3>
+          <p> Shrimp marinated in lime, garlic,
+            and chilies. Served with a side of spicy aioli sauce </p>
+          <h4> 10 </h4>
+        </div>
+        <div class="item">
+          <h3> Roasted Chile Soup </h3>
+          <p> Roasted red chile peppers give
+           this soup the right amount of kick </p>
+          <h4> 4 </h4>
+        </div>
+        <div class="item">
+          <h3> Corn Quesadillas </h3>
+          <p> Two flour tortillas stuffed with
+           corn and monteray jack cheese. Served with a side of salsa and sour
+           cream </p>
+          <h4> 8 </h4>
+        </div>
+      </div>
+    </div>
+        <div class="category">
+          <h1> Entr&eacute;es </h1>
+          <div class="items">
+            <div class="item">
+              <h3> Baja Chicken Sandwich </h3>
+              <p> Chargrilled chicken breast,
+                topped with tomato, spicy guacamole, and sourcream on a Portugese
+                roll </p>
+              <h4> 10 </h4>
+            </div>
+            <div class="item">
+              <h3> Beef Fajitas </h3>
+              <p> Chile rubbed beef served with three
+              soft tortillas, roasted peppers, lettuce, onion, sour cream, and
+              black beans. Add guacamole for 50 cents. </p>
+              <h4> 14 </h4>
+            </div>
+            <div class="item">
+              <h3> Chili Nachos </h3>
+              <p> Loaded tortilla chips topped
+                with black bean salsa, lime sourcream, pepperjack cheese, and
+                chipotle chicken or beef </p>
+              <h4> 12 </h4>
+            </div>
+          </div>
+      </div>
+      <div class="category">
+        <h1> Desserts </h1>
+        <div class="items">
+          <div class="item">
+            <h3> Fried Ice Cream </h3>
+            <h4> 10 </h4>
+          </div>
+          <div class="item">
+            <h3> Churros </h3>
+            <h4> 14 </h4>
+          </div>
+          <div class="item">
+            <h3> Flan </h3>
+            <h4> 12 </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class=imagescontainer>
+      <img class ="image" src="images/taco.jpg" alt="tacos" >
+      <img class ="image" src="images/soup2.jpg" alt="soup">
+      <img class ="image" src="images/dish.jpg" alt="sweet potato fries with various toppings">
+    </div>
+
+
+
+
+
+<!--#include virtual="/includes/footer.inc" -->
+
+</div>
+
+
+
+
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+<script>
+/** cookie **/
+function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length == 2) return parts.pop().split(";").shift();
+}
+
+if (!getCookie(`username`))
+{
+  swal("Hello!", "What's your name?", {
+    content: "input",
+  })
+  .then((value) => {
+    swal(`Hello, ${value}!`);
+    document.cookie=`username=${value}`;
+  });
+}
+
+else {
+  $("#welcomeback").text(`Welcome back, ${getCookie('username')}!`)
+}
+
+
+</script>
+
+
+  </body>
+
+  </html>

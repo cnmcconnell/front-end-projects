@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="contacts.xsl"?>
+<contact-list>
+	<contact id="1">
+		<title>Owner</title>
+		<name>Jeff Garcia</name>
+		<email>boondock.bills@gmail.com</email>
+		<phone>(321)456-7788</phone>
+	</contact>
+
+	<contact id="1">
+		<title>Bar Manager</title>
+		<name>Kelsey Smith</name>
+		<email>boondock.bills@gmail.com</email>
+		<phone>(321)221-4040</phone>
+	</contact>
+
+	<contact id="1">
+		<title>Shift Lead</title>
+		<name>Clark Austin</name>
+		<email>boondock.bills@gmail.com</email>
+		<phone>(407)551-6890</phone>
+	</contact>
+	<!-- additional contact containers would go here -->
+</contact-list>

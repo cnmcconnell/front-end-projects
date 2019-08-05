@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--#include virtual="/includes/meta.inc" -->
+    <meta name="description" content="Boondock Bill's is a contemporary bar offering a variety of cocktails, draughts, and bottles. Explore our drink menu here!">
+    <title> Drinks </title>
+
+
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/jcarousel.basic.css">
+    <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+
+
+  </head>
+
+  <body>
+    <div class="foodcontainer">
+
+      <!--#include virtual="/includes/header.inc" -->
+
+      <!--#include virtual="/includes/nav.inc" -->
+
+      <!--#include virtual="/includes/filler.inc" -->
+
+        <div class="catchphrase">
+        <div> TACOS. </div>
+        <div> TEQUILA. </div>
+        <div> TAPAS. </div>
+      </div>
+
+      <div class="menucontainer">
+        <div class="category">
+          <h1> Cocktails </h1>
+          <div class="items">
+            <div class="item">
+              <h3> Caipirinha </h3>
+              <p> Brazilion cacha&ccedil;a and lime </p>
+              <h4> 8 </h4>
+            </div>
+            <div class="item">
+              <h3> Classic Margarita </h3>
+              <p> Patr&oacute;n tequila, orange liquer, and lime. Served frozen or on
+                ice </p>
+              <h4> 7 </h4>
+            </div>
+            <div class="item">
+              <h3> Classic Mojito </h3>
+              <p> White rum, lime juice and mint </p>
+              <h4> 5 </h4>
+            </div>
+            <div class="item">
+              <h3> Tequila Sunrise </h3>
+              <p> Patr&oacute;n tequila, orange juice, and grenadine </p>
+              <h4> 7 </h4>
+            </div>
+          </div>
+        </div>
+            <div class="category">
+              <h1> Draft </h1>
+              <div class="items">
+                <div class="itembeer">
+                  <h3> Bud Light </h3>
+                  <h4> 4 / 12oz </h4>
+                </div>
+                <div class="itembeer">
+                  <h3> Yuengling </h3>
+                  <h4> 5 / 12oz </h4>
+                </div>
+                <div class="itembeer">
+                  <h3> Stella Artois </h3>
+                  <h4> 6 / 12oz </h4>
+                </div>
+                <div class="itembeer">
+                  <h3> Corona </h3>
+                  <h4> 4 / 12oz </h4>
+                </div>
+              </div>
+          </div>
+          <div class="category">
+            <h1> Bottle </h1>
+            <div class="items">
+              <div class="itembeer">
+                <h3> Modelo Black </h3>
+                <h4> 6 </h4>
+              </div>
+              <div class="itembeer">
+                <h3> Budlight Lime </h3>
+                <h4> 4 </h4>
+              </div>
+              <div class="itembeer">
+                <h3> Golden Monkey </h3>
+                <h4> 7 </h4>
+              </div>
+              <div class="itembeer">
+                <h3> Dragon's Milk </h3>
+                <h4> 9 </h4>
+              </div><div class="itembeer">
+                <h3> Two Hearted </h3>
+                <h4> 6 </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class=imagescontainer>
+      <img class ="image" src="images/margarita.jpg" alt="margarita" >
+      <img class ="image" src="images/beer.jpg" alt="glass of beer">
+      <img class ="image" src="images/tallglass.jpg" alt="two cocktails">
+      </div>
+
+
+
+<!--#include virtual="/includes/footer.inc" -->
+
+</div>
+
+
+
+
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+<script>
+/** cookie **/
+function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length == 2) return parts.pop().split(";").shift();
+}
+
+if (!getCookie(`username`))
+{
+  swal("Hello!", "What's your name?", {
+    content: "input",
+  })
+  .then((value) => {
+    swal(`Hello, ${value}!`);
+    document.cookie=`username=${value}`;
+  });
+}
+
+else {
+  $("#welcomeback").text(`Welcome back, ${getCookie('username')}!`)
+}
+
+
+</script>
+
+
+  </body>
+
+  </html>

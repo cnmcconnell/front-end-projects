@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--#include virtual="/includes/meta.inc" -->
+    <meta name="description" content="Boondock Bill's is a contemporary bar offering a variety of midwestern cuisine and drinks. Find out more about us and where we started!">
+    <title> About Us </title>
+
+
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/jcarousel.basic.css">
+    <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+
+
+  </head>
+
+  <body>
+    <div class="aboutcontainer">
+
+      <!--#include virtual="/includes/header.inc" -->
+
+      <!--#include virtual="/includes/nav.inc" -->
+
+      <!--#include virtual="/includes/filler.inc" -->
+
+        <div class="catchphrase">
+        <div> WHO </div>
+        <div> WE </div>
+        <div> ARE </div>
+      </div>
+
+    <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a urna velit. Duis a justo nec magna elementum dignissim non id nibh. Integer nec blandit nulla. Sed ultricies vestibulum nibh dapibus imperdiet. Curabitur sagittis velit non purus mattis, ac condimentum ipsum bibendum. Ut at cursus sapien, ac ultrices tortor. Etiam eu urna eros. Fusce id risus et diam scelerisque consectetur non eu est. Sed ornare, risus id porttitor posuere, odio lorem porttitor augue, vel rutrum quam   nulla at nibh. Morbi non sem velit. Sed vitae velit eu turpis porttitor interdum. Praesent maximus mi non dignissim consequat. Fusce pretium sagittis accumsan. Cras mi dui, hendrerit eu diam sit amet, dapibus volutpat dolor.
+            Nunc condimentum elit eget dolor dictum, ut feugiat leo facilisis. Aliquam ut ligula ac nisl suscipit eleifend.
+          </p>
+          <p>Cras ultrices porttitor risus, elementum mattis lectus tincidunt ut. Donec ac consectetur mauris, at facilisis massa. Vivamus tincidunt sem nec justo viverra cursus. Maecenas eget facilisis felis, et commodo risus. Donec rutrum fringilla odio eu euismod.</p>
+          <p>Cras et fermentum ligula. Nullam sed facilisis sapien. Etiam mollis, metus at rutrum eleifend, risus libero condimentum sapien, vel lacinia tellus augue id tortor. Nulla convallis ligula ac scelerisque condimentum. Fusce placerat dui quis nulla imperdiet, sed convallis erat laoreet. Aenean lacinia leo ac consequat vulputate. Praesent vulputate fermentum massa, sit amet lacinia quam imperdiet quis.
+            Proin dui eros, rutrum eu laoreet at, egestas id mauris. Sed commodo dapibus nibh sit amet ullamcorper. Fusce in urna tortor. Nunc laoreet nulla sit amet tellus rhoncus ultrices. Praesent ultricies viverra iaculis. Nulla posuere finibus odio, et convallis justo scelerisque scelerisque. Phasellus tellus ante, pellentesque vitae molestie nec, molestie iaculis dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque accumsan dui finibus sodales aliquet.
+          </p>
+</div>
+
+<div class="image">
+</div>
+
+
+
+<!--#include virtual="/includes/footer.inc" -->
+</div>
+
+
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+<script>
+/** cookie **/
+function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length == 2) return parts.pop().split(";").shift();
+}
+
+if (!getCookie(`username`))
+{
+  swal("Hello!", "What's your name?", {
+    content: "input",
+  })
+  .then((value) => {
+    swal(`Hello, ${value}!`);
+    document.cookie=`username=${value}`;
+  });
+}
+
+else {
+  $("#welcomeback").text(`Welcome back, ${getCookie('username')}!`)
+}
+
+
+</script>
+
+
+  </body>
+
+  </html>
